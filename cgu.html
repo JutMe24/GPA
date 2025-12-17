@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions Générales d'Utilisation - GPA Groupe Partenaire des Assurances</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="font-bold text-white">GPA</span>
+                    </div>
+                    <span class="text-xl font-bold">GPA</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-300 hover:text-white transition-colors">Accueil</a>
+                    <div class="relative group">
+                        <button class="nav-link text-gray-300 hover:text-white transition-colors flex items-center space-x-1">
+                            <span>Services</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                            <a href="assurance-auto.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance Auto</a>
+                            <a href="assurance-moto.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance Moto</a>
+                            <a href="assurance-habitation.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance Habitation</a>
+                            <a href="rc-decennale.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">RC Décennale</a>
+                            <a href="assurance-vtc.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance VTC</a>
+                            <a href="rc-professionnelle.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">RC Professionnelle</a>
+                        </div>
+                    </div>
+                    <a href="a-propos.html" class="nav-link text-gray-300 hover:text-white transition-colors">À propos</a>
+                    <a href="index.html#contact" class="nav-link text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-300 hover:text-white">Accueil</a>
+                <div class="py-2">
+                    <div class="text-gray-300 font-semibold">Services</div>
+                    <div class="pl-4 space-y-1">
+                        <a href="assurance-auto.html" class="block py-1 text-gray-400 hover:text-white">Assurance Auto</a>
+                        <a href="assurance-moto.html" class="block py-1 text-gray-400 hover:text-white">Assurance Moto</a>
+                        <a href="assurance-habitation.html" class="block py-1 text-gray-400 hover:text-white">Assurance Habitation</a>
+                        <a href="rc-decennale.html" class="block py-1 text-gray-400 hover:text-white">RC Décennale</a>
+                        <a href="assurance-vtc.html" class="block py-1 text-gray-400 hover:text-white">Assurance VTC</a>
+                        <a href="rc-professionnelle.html" class="block py-1 text-gray-400 hover:text-white">RC Professionnelle</a>
+                    </div>
+                </div>
+                <a href="a-propos.html" class="block py-2 text-gray-300 hover:text-white">À propos</a>
+                <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                        Conditions Générales d'Utilisation
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Les termes et conditions régissant l'utilisation de notre site et services
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CGU Content -->
+    <section class="pb-20 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-gray-700" data-aos="fade-up">
+                <div class="space-y-8">
+                    <!-- Acceptation -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 1 - Acceptation des CGU</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation 
+                                du site web gpa-assurances.com et des services proposés par GPA Groupe Partenaire des Assurances.
+                            </p>
+                            <p>
+                                En accédant à notre site et/ou en utilisant nos services, vous reconnaissez avoir lu, 
+                                compris et accepté sans réserve les présentes CGU. Si vous n'acceptez pas ces conditions, 
+                                veuillez ne pas utiliser notre site.
+                            </p>
+                            <p>
+                                GPA se réserve le droit de modifier ces CGU à tout moment. Les utilisateurs sont invités 
+                                à consulter régulièrement cette page pour prendre connaissance des éventuelles modifications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Objet -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 2 - Objet</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Le site gpa-assurances.com a pour objet de fournir des informations sur les produits 
+                                d'assurance proposés par GPA Groupe Partenaire des Assurances et de permettre aux utilisateurs 
+                                de demander des devis et de souscrire des contrats d'assurance.
+                            </p>
+                            <p>
+                                GPA agit en tant que courtier en assurance et propose les produits suivants :
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Assurance Auto</li>
+                                <li>Assurance Moto</li>
+                                <li>Assurance Habitation</li>
+                                <li>Responsabilité Civile Décennale</li>
+                                <li>Assurance VTC</li>
+                                <li>Responsabilité Civile Professionnelle</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Accès au site -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 3 - Accès au site</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                L'accès au site est gratuit et ne nécessite aucune pré-inscription. Toutefois, certaines 
+                                fonctionnalités peuvent nécessiter la création d'un compte utilisateur.
+                            </p>
+                            <p>
+                                GPA s'efforce de maintenir le site accessible 24h/24 et 7j/7, mais ne peut garantir 
+                                la disponibilité permanente du service. Des interruptions pour maintenance, mises à jour 
+                                ou pour des raisons techniques peuvent survenir.
+                            </p>
+                            <p>
+                                GPA décline toute responsabilité en cas d'indisponibilité du site ou de perturbation 
+                                des services.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Compte utilisateur -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 4 - Compte utilisateur</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Pour accéder à certaines fonctionnalités (demande de devis, suivi de dossier, etc.), 
+                                vous devez créer un compte utilisateur en fournissant des informations exactes et complètes.
+                            </p>
+                            <p>
+                                Vous êtes responsable de la confidentialité de vos identifiants de connexion. 
+                                Toute connexion utilisant vos identifiants est réputée avoir été effectuée par vous-même.
+                            </p>
+                            <p>
+                                Vous vous engagez à ne pas créer de compte frauduleux, à ne pas utiliser de fausses 
+                                informations et à ne pas créer de comptes au nom de tiers sans leur autorisation.
+                            </p>
+                            <p>
+                                GPA se réserve le droit de suspendre ou supprimer tout compte utilisateur en cas 
+                                de violation des présentes CGU.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Services proposés -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 5 - Services proposés</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p><strong>Information et conseil :</strong></p>
+                            <p>
+                                GPA met à disposition des informations sur les produits d'assurance et propose 
+                                des services de conseil personnalisé. Ces informations sont données à titre indicatif 
+                                et ne constituent pas une offre contractuelle.
+                            </p>
+                            
+                            <p class="mt-4"><strong>Demande de devis :</strong></p>
+                            <p>
+                                Les utilisateurs peuvent demander des devis personnalisés en fournissant les informations 
+                                nécessaires à l'évaluation de leur risque. Les devis sont valables pour une durée 
+                                limitée et ne constituent pas un engagement contractuel de la part de GPA.
+                            </p>
+                            
+                            <p class="mt-4"><strong>Souscription de contrats :</strong></p>
+                            <p>
+                                La souscription d'un contrat d'assurance est effective uniquement après acceptation 
+                                du devis par l'utilisateur et signature du contrat. Les contrats sont conclus directement 
+                                entre l'utilisateur et la compagnie d'assurance partenaire.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Responsabilités -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 6 - Responsabilités</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p><strong>Responsabilités de l'utilisateur :</strong></p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Fournir des informations exactes et à jour</li>
+                                <li>Ne pas utiliser le site à des fins illégales ou frauduleuses</li>
+                                <li>Respecter la législation en vigueur</li>
+                                <li>Ne pas perturber le fonctionnement normal du site</li>
+                                <li>Ne pas tenter d'accéder à des zones non autorisées</li>
+                                <li>Respecter les droits de propriété intellectuelle</li>
+                            </ul>
+                            
+                            <p class="mt-4"><strong>Responsabilités de GPA :</strong></p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Fournir des informations exactes et mises à jour</li>
+                                <li>Assurer la confidentialité des données personnelles</li>
+                                <li>Garantir la sécurité des transactions</li>
+                                <li>Offrir un service de qualité</li>
+                                <li>Respecter les obligations légales et réglementaires</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Données personnelles -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 7 - Données personnelles</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                La collecte et le traitement de vos données personnelles sont régis par notre 
+                                <a href="politique-confidentialite.html" class="text-blue-400 hover:text-blue-300 underline">politique de confidentialité</a>.
+                            </p>
+                            <p>
+                                En utilisant notre site, vous consentez à la collecte et au traitement de vos 
+                                données personnelles dans les conditions décrites dans notre politique de confidentialité.
+                            </p>
+                            <p>
+                                Vous disposez d'un droit d'accès, de modification, de rectification et de suppression 
+                                de vos données personnelles conformément au RGPD.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Propriété intellectuelle -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 8 - Propriété intellectuelle</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                L'ensemble du contenu du site gpa-assurances.com (textes, images, vidéos, logos, 
+                                graphismes, etc.) est la propriété exclusive de GPA Groupe Partenaire des Assurances 
+                                ou de ses partenaires et est protégé par la législation française et internationale 
+                                sur la propriété intellectuelle.
+                            </p>
+                            <p>
+                                Toute reproduction, distribution, modification, adaptation ou exploitation de tout 
+                                ou partie de ces éléments est strictement interdite sans autorisation écrite préalable de GPA.
+                            </p>
+                            <p>
+                                Les marques, logos et noms de domaine figurant sur le site sont la propriété 
+                                exclusive de GPA et ne peuvent être utilisés sans autorisation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tarifs -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 9 - Tarifs</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Les tarifs des produits d'assurance proposés sur le site sont établis en fonction 
+                                des informations fournies par l'utilisateur et des tarifs des compagnies d'assurance partenaires.
+                            </p>
+                            <p>
+                                Les tarifs indiqués sur le site sont donnés à titre indicatif et peuvent faire 
+                                l'objet de modifications. Le prix final est celui mentionné dans le contrat d'assurance.
+                            </p>
+                            <p>
+                                GPA ne perçoit aucune commission directement de la part des utilisateurs. 
+                                Sa rémunération provient des commissions versées par les compagnies d'assurance partenaires.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Garanties -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 10 - Garanties</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                GPA s'efforce de fournir des informations exactes et à jour, mais ne peut garantir 
+                                l'exhaustivité ni l'exactitude de toutes les informations présentes sur le site.
+                            </p>
+                            <p>
+                                Les garanties des contrats d'assurance sont celles prévues dans les conditions 
+                                générales des compagnies d'assurance partenaires. GPA n'est pas partie aux contrats 
+                                d'assurance et ne peut être tenue responsable de l'exécution des garanties.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Limitation de responsabilité -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 11 - Limitation de responsabilité</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                La responsabilité de GPA est limitée aux dommages directs résultant d'une faute 
+                                prouvée de sa part. GPA ne pourra être tenue responsable des dommages indirects, 
+                                immatériels ou consécutifs.
+                            </p>
+                            <p>
+                                GPA ne saurait être responsable :
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Des pertes de données ou informations</li>
+                                <li>Des dommages causés par des virus ou logiciels malveillants</li>
+                                <li>Des interruptions de service</li>
+                                <li>Des erreurs ou omissions dans les informations fournies</li>
+                                <li>De l'utilisation frauduleuse du site par des tiers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Liens hypertextes -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 12 - Liens hypertextes</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Le site peut contenir des liens vers des sites tiers. GPA n'exerce aucun contrôle 
+                                sur ces sites et décline toute responsabilité quant à leur contenu, leur fonctionnement 
+                                ou leurs pratiques en matière de confidentialité.
+                            </p>
+                            <p>
+                                Toute création de lien vers notre site nécessite l'autorisation écrite préalable de GPA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Force majeure -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 13 - Force majeure</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                GPA ne pourra être tenue responsable de l'inexécution ou du retard dans l'exécution 
+                                de ses obligations lorsque cette inexécution ou ce retard est dû à un cas de force majeure.
+                            </p>
+                            <p>
+                                Sont considérés comme cas de force majeure : les guerres, émeutes, incendies, grèves, 
+                                catastrophes naturelles, pannes de réseaux, interruptions des services de télécommunication, 
+                                et généralement tout événement imprévisible et insurmontable.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Litiges -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 14 - Litiges</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Les présentes CGU sont régies par le droit français. En cas de litige, les parties 
+                                s'efforceront de trouver une solution amiable.
+                            </p>
+                            <p>
+                                À défaut d'accord amiable, le litige sera porté devant les tribunaux compétents 
+                                de Lyon, France.
+                            </p>
+                            <p>
+                                La langue du contrat est le français.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Durée et résiliation -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 15 - Durée et résiliation</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Les présentes CGU prennent effet dès votre première utilisation du site 
+                                et restent en vigueur tant que vous utilisez nos services.
+                            </p>
+                            <p>
+                                Vous pouvez résilier votre compte utilisateur à tout moment en nous contactant 
+                                par email ou via votre espace personnel.
+                            </p>
+                            <p>
+                                GPA se réserve le droit de résilier votre compte en cas de violation des 
+                                présentes CGU ou pour toute autre motif légitime.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Article 16 - Contact</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Pour toute question concernant les présentes CGU, vous pouvez nous contacter :
+                            </p>
+                            <ul class="space-y-2 ml-4">
+                                <li><strong>Email :</strong> <a href="mailto:contact@partenaireassurances.com" class="text-blue-400 hover:text-blue-300 underline">contact@partenaireassurances.com</a></li>
+                                <li><strong>Téléphone :</strong> +33 4 81 91 28 80</li>
+                                <li><strong>Adresse :</strong> Rue De La Part Dieu, 69003 Lyon, France</li>
+                            </ul>
+                            <p><strong>Dernière mise à jour :</strong> 28 novembre 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-blue-600/20 to-purple-600/20">
+        <div class="container mx-auto text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Des questions sur nos CGU ?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Notre équipe est à votre disposition pour clarifier tous les points 
+                    de nos conditions générales d'utilisation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all">
+                        Nous contacter
+                    </a>
+                    <a href="index.html" class="px-8 py-4 bg-gray-800 rounded-xl font-semibold hover:bg-gray-700 transition-all">
+                        Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="font-bold text-white">GPA</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">GPA</h3>
+                            <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Votre partenaire de confiance pour toutes vos assurances.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="assurance-auto.html" class="hover:text-blue-400 transition-colors">Assurance Auto</a></li>
+                        <li><a href="assurance-moto.html" class="hover:text-blue-400 transition-colors">Assurance Moto</a></li>
+                        <li><a href="assurance-habitation.html" class="hover:text-blue-400 transition-colors">Assurance Habitation</a></li>
+                        <li><a href="rc-decennale.html" class="hover:text-blue-400 transition-colors">RC Décennale</a></li>
+                        <li><a href="assurance-vtc.html" class="hover:text-blue-400 transition-colors">Assurance VTC</a></li>
+                        <li><a href="rc-professionnelle.html" class="hover:text-blue-400 transition-colors">RC Professionnelle</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="a-propos.html" class="hover:text-blue-400 transition-colors">À propos</a></li>
+                        <li><a href="mentions-legales.html" class="hover:text-blue-400 transition-colors">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-blue-400 transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="cgu.html" class="hover:text-blue-400 transition-colors">CGU</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 GPA Groupe Partenaire des Assurances. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Décennale - GPA Groupe Partenaire des Assurances</title>
+    <meta name="description" content="Assurance responsabilité civile décennale pour professionnels du bâtiment. Couverture 10 ans obligatoire. Devis gratuit et rapide.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-red-500/30">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center transform hover:rotate-12 transition-transform">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">GPA</h1>
+                        <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link hover:text-red-400 transition-colors">Accueil</a>
+                    <a href="index.html#services" class="nav-link hover:text-red-400 transition-colors">Services</a>
+                    <a href="index.html#devis" class="nav-link hover:text-red-400 transition-colors">Devis</a>
+                    <a href="index.html#contact" class="nav-link hover:text-red-400 transition-colors">Contact</a>
+                    <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-red-500/50 transition-all">
+                        Devis Gratuit
+                    </button>
+                </div>
+                
+                <button class="md:hidden text-white" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center relative pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-red-900/20 to-orange-900/20"></div>
+        
+        <!-- 3D Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="mb-6">
+                        <a href="index.html#services" class="text-red-400 hover:text-red-300 transition-colors">
+                            <i class="fas fa-arrow-left mr-2"></i> Retour aux services
+                        </a>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                        <span class="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                            RC Décennale
+                        </span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Assurance responsabilité civile décennale obligatoire pour les professionnels du bâtiment. 
+                        Couverture des dommages pendant 10 ans après réception des travaux.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-red-500 to-red-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-red-500/50 transform hover:scale-105 transition-all">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Devis Gratuit
+                        </button>
+                        <button onclick="document.getElementById('coverages').scrollIntoView({behavior: 'smooth'})" class="border-2 border-red-500 px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-500/20 transition-all">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                       ">Nos Couvertures
+                        </button>
+                    </div>
+                    
+                    <!-- Key Features -->
+                    <div class="grid grid-cols-2 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-hard-hat text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Obligatoire</div>
+                            <div class="text-sm text-gray-400">Législation bâtiment</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-calendar-alt text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">10 ans</div>
+                            <div class="text-sm text-gray-400">Garantie décennale</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-tools text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Tous corps de métier</div>
+                            <div class="text-sm text-gray-400">Artisans et entreprises</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-certificate text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Attestation</div>
+                            <div class="text-sm text-gray-400">Immédiate souscription</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative w-full h-96 md:h-full min-h-[400px]">
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-red-600/20 rounded-3xl transform rotate-3"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-600/20 to-red-500/20 rounded-3xl transform -rotate-3"></div>
+                        <div class="relative bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-red-500/30 h-full flex items-center justify-center overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop&crop=center" 
+                                 alt="Chantier de construction" 
+                                 class="w-full h-full object-cover rounded-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent rounded-2xl"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <h3 class="text-2xl font-bold mb-2">Construisez en Toute Sécurité</h3>
+                                <p class="text-gray-300">Protection décennale professionnelle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverages Section -->
+    <section id="coverages" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                        Nos Formules de Couverture
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Choisissez la protection adaptée à votre activité</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Essentielle -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-gray-600/30 hover:border-red-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Essentielle</h3>
+                    <p class="text-gray-300 mb-6">Couverture décennale obligatoire pour les artisans.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garantie décennale
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Dommages solidaires
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Mise en conformité
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Frais de recherche
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-red-400 mb-4">À partir de 35€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-600 transition-colors">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Professionnelle -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-red-500/30 hover:border-red-400/50 transition-all hover:transform hover:scale-105 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-red-500 to-red-600 px-4 py-1 rounded-full text-sm font-semibold">
+                        Populaire
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Professionnelle</h3>
+                    <p class="text-gray-300 mb-6">Couverture complète pour PMI et PME du bâtiment.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garanties Essentielle
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            RC exploitation
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            RC après livraison
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Protection juridique
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Perte d'exploitation
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-red-400 mb-4">À partir de 59€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-red-500 to-red-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-red-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Premium -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-orange-500/30 hover:border-orange-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Premium</h3>
+                    <p class="text-gray-300 mb-6">Protection maximale pour grandes entreprises.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Toutes garanties Professionnelle
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garantie dommages ouvrage
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garantie parfait achèvement
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garantie biens confiés
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Plafonds illimités
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-red-400 mb-4">À partir de 89€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-orange-500 to-orange-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-orange-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professions Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                        Corps de Métier Couverts
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Nous assurons tous les professionnels du bâtiment</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-red-500/30 hover:border-red-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb1924025?w=400&h=300&fit=crop&crop=center" 
+                         alt="Maçonnerie" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Maçonnerie & Gros Œuvre</h3>
+                    <p class="text-gray-300 mb-4">Fondations, murs, dallages</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Maçonnerie traditionnelle</li>
+                        <li>• Béton armé</li>
+                        <li>• Fondations spéciales</li>
+                        <li>• Terrassement</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-red-500/30 hover:border-red-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop&crop=center" 
+                         alt="Charpente" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Charpente & Couverture</h3>
+                    <p class="text-gray-300 mb-4">Toitures, charpentes, zinguerie</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Charpente bois/métal</li>
+                        <li>• Couverture tuiles/ardoises</li>
+                        <li>• Étanchéité</li>
+                        <li>• Zinguerie</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-red-500/30 hover:border-red-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop&crop=center" 
+                         alt="Plomberie" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Plomberie & Chauffage</h3>
+                    <p class="text-gray-300 mb-4">Installations sanitaires, chauffage</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Plomberie complète</li>
+                        <li>• Chauffage central</li>
+                        <li>• Climatisation</li>
+                        <li>• VMC</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-red-500/30 hover:border-red-400/50 transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1603726847594-901c44a0a2b2?w=400&h=300&fit=crop&crop=center" 
+                         alt="Électricité" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Électricité</h3>
+                    <p class="text-gray-300 mb-4">Installations électriques, domotique</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Installation complète</li>
+                        <li>• Mise aux normes</li>
+                        <li>• Domotique</li>
+                        <li>• Solaire photovoltaïque</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-red-500/30 hover:border-red-400/50 transition-all" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop&crop=center" 
+                         alt="Menuiserie" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Menuiserie & Agencement</h3>
+                    <p class="text-gray-300 mb-4">Portes, fenêtres, aménagements</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Menuiserie intérieure</li>
+                        <li>• Portes et fenêtres</li>
+                        <li>• Agencement sur mesure</li>
+                        <li>• Dressings</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-red-500/30 hover:border-red-400/50 transition-all" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1577615900000-5e7b0c5c5e5a?w=400&h=300&fit=crop&crop=center" 
+                         alt="Peinture" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Peinture & Revêtements</h3>
+                    <p class="text-gray-300 mb-4">Peinture, sols, finitions</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Peinture intérieure/extérieure</li>
+                        <li>• Revêtements muraux</li>
+                        <li>• Sols souples</li>
+                        <li>• Carrelage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Options Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                        Options et Services Complémentaires
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Personnalisez votre contrat décennale</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-red-500/30 hover:border-red-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-file-contract text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Assistance juridique</h3>
+                    <p class="text-gray-400 text-sm">Protection pour tous vos litiges professionnels</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-orange-500/30 hover:border-orange-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Perte d'exploitation</h3>
+                    <p class="text-gray-400 text-sm">Indemnisation en cas d'interruption de chantier</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-yellow-500/30 hover:border-yellow-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-truck text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Matériel et outils</h3>
+                    <p class="text-gray-400 text-sm">Protection de vos équipements professionnels</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-green-500/30 hover:border-green-400/50 transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">RC employés</h3>
+                    <p class="text-gray-400 text-sm">Responsabilité civile du personnel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                        Pourquoi Choisir GPA ?
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">L'expertise décennale au service de votre entreprise</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-tachometer-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Attestation immédiate</h3>
+                                <p class="text-gray-300">Réception de votre attestation décennale sous 24h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-euro-sign text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Tarifs compétitifs</h3>
+                                <p class="text-gray-300">Jusqu'à -25% sur vos primes d'assurance décennale</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-certificate text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Certification Qualibat</h3>
+                                <p class="text-gray-300">Assureurs reconnus et certifiés pour le bâtiment</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-headset text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Conseillers spécialisés</h3>
+                                <p class="text-gray-300">Experts en assurance du bâtiment à votre écoute</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop&crop=center" 
+                             alt="Professionnel du bâtiment" 
+                             class="rounded-3xl w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl p-6 text-white">
+                            <div class="text-3xl font-bold mb-2">5000+</div>
+                            <div class="text-sm">artisans et entreprises protégés</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                        Questions Fréquentes
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Tout savoir sur l'assurance décennale</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-red-500/30" data-aos="fade-up" data-aos-delay="100">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">L'assurance décennale est-elle obligatoire ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Oui, l'assurance décennale est obligatoire pour tous les professionnels du bâtiment selon la loi Spinetta. Elle couvre les dommages pouvant compromettre la solidité de l'ouvrage pendant 10 ans après réception des travaux.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-red-500/30" data-aos="fade-up" data-aos-delay="200">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Quels dommages sont couverts ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        La garantie décennale couvre les dommages qui compromettent la solidité de l'ouvrage ou le rendent impropre à sa destination : fissures importantes, problèmes d'étanchéité, défauts de fondation, malfaçons structurelles, etc.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-red-500/30" data-aos="fade-up" data-aos-delay="300">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Comment obtenir l'attestation décennale ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Après souscription, vous recevez votre attestation décennale sous 24h. Ce document est indispensable pour démarrer vos chantiers et doit être présenté à vos clients et aux administrations.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-red-500/30" data-aos="fade-up" data-aos-delay="400">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Quelle est la différence avec la RC professionnelle ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        La RC professionnelle couvre les dommages causés à des tiers pendant l'exécution des travaux, tandis que la garantie décennale couvre les dommages sur l'ouvrage lui-même après réception, pendant 10 ans.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-br from-red-500 to-orange-600 rounded-3xl p-12 text-center" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+                    Protégez Votre Activité Maintenant
+                </h2>
+                <p class="text-xl mb-8 text-red-100">
+                    Obtenez votre attestation décennale sous 24h
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="window.location.href='index.html#devis'" class="bg-white text-red-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-white/50 transform hover:scale-105 transition-all">
+                        <i class="fas fa-calculator mr-2"></i>
+                        Devis Gratuit
+                    </button>
+                    <button onclick="window.location.href='tel:+33123456789'" class="border-2 border-white px-8 py-4 rounded-full text-lg font-semibold text-white hover:bg-white/20 transition-all">
+                        <i class="fas fa-phone mr-2"></i>
+                        Appeler un conseiller
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">GPA</h3>
+                            <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Votre partenaire de confiance pour toutes vos assurances.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="assurance-auto.html" class="hover:text-red-400 transition-colors">Assurance Auto</a></li>
+                        <li><a href="assurance-moto.html" class="hover:text-red-400 transition-colors">Assurance Moto</a></li>
+                        <li><a href="assurance-habitation.html" class="hover:text-red-400 transition-colors">Assurance Habitation</a></li>
+                        <li><a href="rc-decennale.html" class="hover:text-red-400 transition-colors">RC Décennale</a></li>
+                        <li><a href="assurance-vtc.html" class="hover:text-red-400 transition-colors">Assurance VTC</a></li>
+                        <li><a href="rc-professionnelle.html" class="hover:text-red-400 transition-colors">RC Professionnelle</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-red-400 transition-colors">À propos</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:text-red-400 transition-colors">CGU</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-500/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-500/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-500/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-500/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 GPA Groupe Partenaire des Assurances. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+        
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+        });
+        
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('show');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+</html>

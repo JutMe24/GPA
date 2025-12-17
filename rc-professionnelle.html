@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Professionnelle - GPA Groupe Partenaire des Assurances</title>
+    <meta name="description" content="Assurance responsabilité civile professionnelle pour toutes activités. Couverture erreurs et omissions. Devis gratuit et rapide.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-indigo-500/30">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center transform hover:rotate-12 transition-transform">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">GPA</h1>
+                        <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link hover:text-indigo-400 transition-colors">Accueil</a>
+                    <a href="index.html#services" class="nav-link hover:text-indigo-400 transition-colors">Services</a>
+                    <a href="index.html#devis" class="nav-link hover:text-indigo-400 transition-colors">Devis</a>
+                    <a href="index.html#contact" class="nav-link hover:text-indigo-400 transition-colors">Contact</a>
+                    <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-indigo-500/50 transition-all">
+                        Devis Gratuit
+                    </button>
+                </div>
+                
+                <button class="md:hidden text-white" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center relative pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/20 to-purple-900/20"></div>
+        
+        <!-- 3D Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="mb-6">
+                        <a href="index.html#services" class="text-indigo-400 hover:text-indigo-300 transition-colors">
+                            <i class="fas fa-arrow-left mr-2"></i> Retour aux services
+                        </a>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                        <span class="bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                            RC Professionnelle
+                        </span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Protection complète pour votre activité professionnelle. Couverture des erreurs, 
+                        omissions et dommages causés à des tiers dans l'exercice de votre métier.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-indigo-500 to-indigo-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-indigo-500/50 transform hover:scale-105 transition-all">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Devis Gratuit
+                        </button>
+                        <button onclick="document.getElementById('sectors').scrollIntoView({behavior: 'smooth'})" class="border-2 border-indigo-500 px-8 py-4 rounded-full text-lg font-semibold hover:bg-indigo-500/20 transition-all">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            Secteurs Couverts
+                        </button>
+                    </div>
+                    
+                    <!-- Key Features -->
+                    <div class="grid grid-cols-2 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-briefcase text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Tous secteurs</div>
+                            <div class="text-sm text-gray-400">Services, artisanat, commerce</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-gavel text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Protection juridique</div>
+                            <div class="text-sm text-gray-400">Défense et recours</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-user-shield text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Erreurs & omissions</div>
+                            <div class="text-sm text-gray-400">Fautes professionnelles</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-certificate text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Attestation</div>
+                            <div class="text-sm text-gray-400">Souscription immédiate</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative w-full h-96 md:h-full min-h-[400px]">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-indigo-600/20 rounded-3xl transform rotate-3"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-indigo-500/20 rounded-3xl transform -rotate-3"></div>
+                        <div class="relative bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-indigo-500/30 h-full flex items-center justify-center overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&crop=center" 
+                                 alt="Professionnel au bureau" 
+                                 class="w-full h-full object-cover rounded-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent rounded-2xl"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <h3 class="text-2xl font-bold mb-2">Exercez en Toute Sécurité</h3>
+                                <p class="text-gray-300">Protection professionnelle complète</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors Section -->
+    <section id="sectors" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                        Nos Formules de Couverture
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Choisissez la protection adaptée à votre activité</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Essentielle -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-gray-600/30 hover:border-indigo-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Essentielle</h3>
+                    <p class="text-gray-300 mb-6">Couverture RC professionnelle de base pour indépendants.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            RC professionnelle
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Dommages corporels
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Dommages matériels
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Dommages immatériels
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-indigo-400 mb-4">À partir de 25€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-600 transition-colors">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Professionnelle -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all hover:transform hover:scale-105 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-indigo-600 px-4 py-1 rounded-full text-sm font-semibold">
+                        Populaire
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Professionnelle</h3>
+                    <p class="text-gray-300 mb-6">Couverture complète pour PMI et professions libérales.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garanties Essentielle
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Erreurs et omissions
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Protection juridique
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Défense pénale
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Pertes financières
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-indigo-400 mb-4">À partir de 45€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-indigo-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Premium -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Premium</h3>
+                    <p class="text-gray-300 mb-6">Protection maximale pour grandes entreprises.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Toutes garanties Professionnelle
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Plafonds illimités
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            RC exploitation
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            RC après livraison
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Protection médias
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-indigo-400 mb-4">À partir de 75€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-purple-500 to-purple-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Sectors Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                        Secteurs d'Activité Couverts
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Nous assurons tous les types de professions</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=center" 
+                         alt="Consultant" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Services & Conseil</h3>
+                    <p class="text-gray-300 mb-4">Consultants, formateurs, coachs</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Conseil en management</li>
+                        <li>• Formation professionnelle</li>
+                        <li>• Coaching et développement</li>
+                        <li>• Communication marketing</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop&crop=center" 
+                         alt="Développeur" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Informatique & Tech</h3>
+                    <p class="text-gray-300 mb-4">Développeurs, freelances IT, startups</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Développement web/mobile</li>
+                        <li>• Cybersécurité</li>
+                        <li>• Infogérance</li>
+                        <li>• Data science</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center" 
+                         alt="Professionnel de santé" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Santé & Bien-être</h3>
+                    <p class="text-gray-300 mb-4">Professions paramédicales, thérapeutes</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Ostéopathes et kinés</li>
+                        <li>• Psychologues</li>
+                        <li>• Nutritionnistes</li>
+                        <li>• Esthéticiennes</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1559028012-c754c04d8b20?w=400&h=300&fit=crop&crop=center" 
+                         alt="Artisan" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Artisanat & Création</h3>
+                    <p class="text-gray-300 mb-4">Artisans, créateurs, designers</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Menuisiers et ébénistes</li>
+                        <li>• Plombiers et électriciens</li>
+                        <li>• Designers graphiques</li>
+                        <li>• Photographes</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=300&fit=crop&crop=center" 
+                         alt="Commerce" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Commerce & Vente</h3>
+                    <p class="text-gray-300 mb-4">Commerçants, e-commerçants, agents</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Boutiques et magasins</li>
+                        <li>• Vente en ligne</li>
+                        <li>• Agents immobiliers</li>
+                        <li>• Courtiers</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-indigo-500/30 hover:border-indigo-400/50 transition-all" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1454165205744-335784eae16f?w=400&h=300&fit=crop&crop=center" 
+                         alt="Professions libérales" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Professions Libérales</h3>
+                    <p class="text-gray-300 mb-4">Avocats, experts-comptables, architectes</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Avocats et juristes</li>
+                        <li>• Experts-comptables</li>
+                        <li>• Architectes</li>
+                        <li>• Ingénieurs conseils</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Options Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                        Options et Services Complémentaires
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Personnalisez votre contrat RC Pro</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-indigo-500/30 hover:border-indigo-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-file-contract text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Protection juridique</h3>
+                    <p class="text-gray-400 text-sm">Couverture des frais de justice et honoraires d'avocats</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-purple-500/30 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Perte d'exploitation</h3>
+                    <p class="text-gray-400 text-sm">Indemnisation en cas d'interruption d'activité</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">RC employés</h3>
+                    <p class="text-gray-400 text-sm">Responsabilité civile du personnel</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-green-500/30 hover:border-green-400/50 transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Cyberrisque</h3>
+                    <p class="text-gray-400 text-sm">Protection contre les cyberattaques et pertes de données</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                        Pourquoi Choisir GPA ?
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">L'expertise RC professionnelle au service de votre activité</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-tachometer-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Souscription rapide</h3>
+                                <p class="text-gray-300">Devis instantané et contrat sous 24h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-euro-sign text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Tarifs compétitifs</h3>
+                                <p class="text-gray-300">Jusqu'à -30% sur vos primes d'assurance</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-certificate text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Attestation immédiate</h3>
+                                <p class="text-gray-300">Recevez votre attestation RC Pro sous 1h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-headset text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Conseillers spécialisés</h3>
+                                <p class="text-gray-300">Experts en assurance professionnelle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center" 
+                             alt="Entreprise moderne" 
+                             class="rounded-3xl w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl p-6 text-white">
+                            <div class="text-3xl font-bold mb-2">8000+</div>
+                            <div class="text-sm">professionnels protégés</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                        Questions Fréquentes
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Tout savoir sur la RC professionnelle</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-indigo-500/30" data-aos="fade-up" data-aos-delay="100">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">La RC professionnelle est-elle obligatoire ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        La RC professionnelle n'est pas obligatoire pour toutes les professions, mais vivement recommandée. Elle est obligatoire pour certaines professions réglementées (santé, construction, etc.) et indispensable pour protéger votre activité.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-indigo-500/30" data-aos="fade-up" data-aos-delay="200">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Quels dommages sont couverts ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        La RC professionnelle couvre les dommages corporels, matériels et immatériels causés à des tiers dans l'exercice de votre activité professionnelle : erreurs, négligences, mauvais conseils, défauts de fabrication, etc.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-indigo-500/30" data-aos="fade-up" data-aos-delay="300">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Quelle est la différence avec la RC décennale ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        La RC professionnelle couvre les dommages aux tiers dans l'exercice quotidien de votre activité, tandis que la RC décennale est spécifique au secteur du bâtiment et couvre les dommages sur les ouvrages pendant 10 ans après réception.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-indigo-500/30" data-aos="fade-up" data-aos-delay="400">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Comment déterminer le plafond de garantie ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Le plafond dépend de votre activité, de votre chiffre d'affaires et des risques spécifiques. Nos conseillers vous aideront à déterminer le plafond adapté pour une protection optimale.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl p-12 text-center" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+                    Protégez Votre Activité Maintenant
+                </h2>
+                <p class="text-xl mb-8 text-indigo-100">
+                    Obtenez votre attestation RC Pro sous 1h
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="window.location.href='index.html#devis'" class="bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-white/50 transform hover:scale-105 transition-all">
+                        <i class="fas fa-calculator mr-2"></i>
+                        Devis Gratuit
+                    </button>
+                    <button onclick="window.location.href='tel:+33123456789'" class="border-2 border-white px-8 py-4 rounded-full text-lg font-semibold text-white hover:bg-white/20 transition-all">
+                        <i class="fas fa-phone mr-2"></i>
+                        Appeler un conseiller
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">GPA</h3>
+                            <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Votre partenaire de confiance pour toutes vos assurances.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="assurance-auto.html" class="hover:text-indigo-400 transition-colors">Assurance Auto</a></li>
+                        <li><a href="assurance-moto.html" class="hover:text-indigo-400 transition-colors">Assurance Moto</a></li>
+                        <li><a href="assurance-habitation.html" class="hover:text-indigo-400 transition-colors">Assurance Habitation</a></li>
+                        <li><a href="rc-decennale.html" class="hover:text-indigo-400 transition-colors">RC Décennale</a></li>
+                        <li><a href="assurance-vtc.html" class="hover:text-indigo-400 transition-colors">Assurance VTC</a></li>
+                        <li><a href="rc-professionnelle.html" class="hover:text-indigo-400 transition-colors">RC Professionnelle</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-indigo-400 transition-colors">À propos</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition-colors">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition-colors">CGU</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-500/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-500/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-500/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-indigo-500/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 GPA Groupe Partenaire des Assurances. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+        
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+        });
+        
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('show');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+</html>

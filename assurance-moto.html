@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assurance Moto - GPA Groupe Partenaire des Assurances</title>
+    <meta name="description" content="Assurance moto complète pour tous les deux-roues. Couverture tous risques, vol, incendie. Devis gratuit et rapide.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-purple-500/30">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center transform hover:rotate-12 transition-transform">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">GPA</h1>
+                        <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link hover:text-purple-400 transition-colors">Accueil</a>
+                    <a href="index.html#services" class="nav-link hover:text-purple-400 transition-colors">Services</a>
+                    <a href="index.html#devis" class="nav-link hover:text-purple-400 transition-colors">Devis</a>
+                    <a href="index.html#contact" class="nav-link hover:text-purple-400 transition-colors">Contact</a>
+                    <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+                        Devis Gratuit
+                    </button>
+                </div>
+                
+                <button class="md:hidden text-white" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center relative pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/20"></div>
+        
+        <!-- 3D Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="mb-6">
+                        <a href="index.html#services" class="text-purple-400 hover:text-purple-300 transition-colors">
+                            <i class="fas fa-arrow-left mr-2"></i> Retour aux services
+                        </a>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                        <span class="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                            Assurance Moto
+                        </span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Protection complète pour votre deux-roues. Solutions adaptées pour tous types de motos, 
+                        scooters et cyclomoteurs. Couverture vol, accidents et assistance 24h/24.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-purple-500 to-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-purple-500/50 transform hover:scale-105 transition-all">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Devis Gratuit
+                        </button>
+                        <button onclick="document.getElementById('coverages').scrollIntoView({behavior: 'smooth'})" class="border-2 border-purple-500 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-500/20 transition-all">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            Nos Couvertures
+                        </button>
+                    </div>
+                    
+                    <!-- Key Features -->
+                    <div class="grid grid-cols-2 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-motorcycle text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Tous deux-roues</div>
+                            <div class="text-sm text-gray-400">50cc à 1250cc+</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Vol & Incendie</div>
+                            <div class="text-sm text-gray-400">Protection maximale</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-helmet-safety text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Équipements</div>
+                            <div class="text-sm text-gray-400">Casque et blouson</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-road text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Assistance</div>
+                            <div class="text-sm text-gray-400">Dépanage 24h/24</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative w-full h-96 md:h-full min-h-[400px]">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-3xl transform rotate-3"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-purple-500/20 rounded-3xl transform -rotate-3"></div>
+                        <div class="relative bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-purple-500/30 h-full flex items-center justify-center overflow-hidden">
+                            <div class="image-container absolute inset-0">
+                                <img src="moto-sportive.jfif" 
+                                     alt="Moto sportive" 
+                                     class="moto-image w-full h-full object-cover rounded-2xl" 
+                                     loading="lazy"
+                                     onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="fallback-image absolute inset-0 bg-gray-800 rounded-2xl flex items-center justify-center" style="display:none;">
+                                    <div class="text-center text-gray-400">
+                                        <i class="fas fa-motorcycle text-6xl mb-4"></i>
+                                        <p class="text-lg">Moto Sportive</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent rounded-2xl"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <h3 class="text-2xl font-bold mb-2">Liberté et Sécurité</h3>
+                                <p class="text-gray-300">Roulez l'esprit tranquille</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverages Section -->
+    <section id="coverages" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                        Nos Formules de Couverture
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Choisissez la protection adaptée à votre deux-roues</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tiers -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-gray-600/30 hover:border-purple-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Au Tiers</h3>
+                    <p class="text-gray-300 mb-6">Couverture minimale obligatoire pour les dommages causés aux tiers.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Responsabilité civile
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Défense pénale
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Assistance 0km
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-purple-400 mb-4">À partir de 19€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-600 transition-colors">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Tiers+ -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all hover:transform hover:scale-105 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-purple-600 px-4 py-1 rounded-full text-sm font-semibold">
+                        Populaire
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tiers+</h3>
+                    <p class="text-gray-300 mb-6">Formule équilibrée avec protections essentielles.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garanties Tiers
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Vol et incendie
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Bris de glaces
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Catastrophes naturelles
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-purple-400 mb-4">À partir de 35€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-purple-500 to-purple-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Tous Risques -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tous Risques</h3>
+                    <p class="text-gray-300 mb-6">Protection maximale pour une tranquillité d'esprit totale.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Toutes garanties Tiers+
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Dommages tous accidents
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Protection du conducteur
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Équipements du motard
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Valeur à neuf 24 mois
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-purple-400 mb-4">À partir de 59€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Options Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                        Options et Services Complémentaires
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Personnalisez votre contrat moto</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-purple-500/30 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-helmet-safety text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Équipements motard</h3>
+                    <p class="text-gray-400 text-sm">Casque, blouson, gants, bottes jusqu'à 1000€</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-green-500/30 hover:border-green-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-truck-pickup text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Rapatriement</h3>
+                    <p class="text-gray-400 text-sm">Transport du véhicule et du conducteur</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Entretien</h3>
+                    <p class="text-gray-400 text-sm">Révisions et contrôles techniques inclus</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-yellow-500/30 hover:border-yellow-400/50 transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-globe-europe text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Protection voyage</h3>
+                    <p class="text-gray-400 text-sm">Assistance partout en Europe</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Types Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                        Tous Types de Deux-Roues
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Nous couvrons tous les véhicules à deux roues</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="image-container w-full h-48 mb-6">
+                        <img src="moto%20sport.jfif" 
+                             alt="Moto sportive" 
+                             class="moto-image w-full h-48 object-cover rounded-2xl" 
+                             loading="lazy"
+                             onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-image absolute inset-0 bg-gray-800 rounded-2xl flex items-center justify-center" style="display:none;">
+                            <div class="text-center text-gray-400">
+                                <i class="fas fa-motorcycle text-4xl mb-2"></i>
+                                <p>Moto Sportive</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Motos & Scooters</h3>
+                    <p class="text-gray-300 mb-4">50cc à 1250cc et plus</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Sportives</li>
+                        <li>• Routières</li>
+                        <li>• Custom</li>
+                        <li>• Scooters</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="image-container w-full h-48 mb-6">
+                        <img src="Motos%20Trail.jfif" 
+                             alt="Moto trial" 
+                             class="moto-image w-full h-48 object-cover rounded-2xl" 
+                             loading="lazy"
+                             onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-image absolute inset-0 bg-gray-800 rounded-2xl flex items-center justify-center" style="display:none;">
+                            <div class="text-center text-gray-400">
+                                <i class="fas fa-motorcycle text-4xl mb-2"></i>
+                                <p>Moto Trail</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Motos Trail</h3>
+                    <p class="text-gray-300 mb-4">Enduro, trail, cross</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Usage mixte</li>
+                        <li>• Tout-terrain</li>
+                        <li>• Aventure</li>
+                        <li>• Raid</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="image-container w-full h-48 mb-6">
+                        <img src="Cyclomoteurs%20&%20VAE" 
+                             alt="Vélo électrique" 
+                             class="moto-image w-full h-48 object-cover rounded-2xl" 
+                             loading="lazy"
+                             onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-image absolute inset-0 bg-gray-800 rounded-2xl flex items-center justify-center" style="display:none;">
+                            <div class="text-center text-gray-400">
+                                <i class="fas fa-bicycle text-4xl mb-2"></i>
+                                <p>Vélo Électrique</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cyclomoteurs & VAE</h3>
+                    <p class="text-gray-300 mb-4">Vélos électriques et cyclomoteurs</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• VAE 25km/h</li>
+                        <li>• Speedbike 45km/h</li>
+                        <li>• Cyclomoteurs 50cc</li>
+                        <li>• Vélos classiques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                        Pourquoi Choisir GPA ?
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">L'expertise moto au service de votre protection</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-tachometer-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Devis ultra-rapide</h3>
+                                <p class="text-gray-300">Réponse immédiate et souscription en ligne 5 minutes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-euro-sign text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Tarifs compétitifs</h3>
+                                <p class="text-gray-300">Jusqu'à -35% sur vos primes d'assurance moto</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Jeunes conducteurs</h3>
+                                <p class="text-gray-300">Solutions adaptées avec tarifs préférentiels</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-headset text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Service spécialisé</h3>
+                                <p class="text-gray-300">Conseillers experts en assurance deux-roues</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <div class="image-container relative">
+                            <img src="https://images.pexels.com/photos/1008155/motorcycle-motorcyclist-race-1008155.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                 alt="Groupe de motards" 
+                                 class="moto-image rounded-3xl w-full" 
+                                 loading="lazy">
+                            <div class="absolute -bottom-6 -left-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 text-white">
+                                <div class="text-3xl font-bold mb-2">10000+</div>
+                                <div class="text-sm">motards protégés par GPA</div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-6 text-white">
+                            <div class="text-3xl font-bold mb-2">10000+</div>
+                            <div class="text-sm">motards protégés par GPA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                        Questions Fréquentes
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Tout savoir sur l'assurance moto</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-purple-500/30" data-aos="fade-up" data-aos-delay="100">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Quelle assurance pour un 50cc ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Pour un cyclomoteur 50cc, l'assurance au tiers est obligatoire. Cependant, nous recommandons au minimum la formule tiers+ qui inclut le vol et l'incendie, très fréquents sur ce type de véhicule.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-purple-500/30" data-aos="fade-up" data-aos-delay="200">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Les équipements sont-ils couverts ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Oui, nos formules tous risques incluent la protection des équipements du motard (casque, blouson, gants, bottes) jusqu'à 1000€ en cas d'accident. Cette garantie peut être étendue sur les formules intermédiaires.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-purple-500/30" data-aos="fade-up" data-aos-delay="300">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Comment assurer un vélo électrique ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Les vélos électriques jusqu'à 25km/h ne nécessitent pas d'assurance obligatoire, mais nous proposons une protection vol et dommages. Pour les speedbikes 45km/h, l'assurance est obligatoire au minimum au tiers.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-purple-500/30" data-aos="fade-up" data-aos-delay="400">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Quelles sont les franchises en cas de vol ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Les franchises varient selon la formule : 10% du véhicule avec un minimum de 300€ en tiers+, et 5% minimum 150€ en tous risques. La franchise peut être réduite avec des options complémentaires.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl p-12 text-center" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+                    Protégez Votre Deux-Roues Maintenant
+                </h2>
+                <p class="text-xl mb-8 text-purple-100">
+                    Obtenez votre devis personnalisé en moins de 3 minutes
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="window.location.href='index.html#devis'" class="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-white/50 transform hover:scale-105 transition-all">
+                        <i class="fas fa-calculator mr-2"></i>
+                        Devis Gratuit
+                    </button>
+                    <button onclick="window.location.href='tel:+33123456789'" class="border-2 border-white px-8 py-4 rounded-full text-lg font-semibold text-white hover:bg-white/20 transition-all">
+                        <i class="fas fa-phone mr-2"></i>
+                        Appeler un conseiller
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">GPA</h3>
+                            <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Votre partenaire de confiance pour toutes vos assurances.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="assurance-auto.html" class="hover:text-purple-400 transition-colors">Assurance Auto</a></li>
+                        <li><a href="assurance-moto.html" class="hover:text-purple-400 transition-colors">Assurance Moto</a></li>
+                        <li><a href="assurance-habitation.html" class="hover:text-purple-400 transition-colors">Assurance Habitation</a></li>
+                        <li><a href="rc-decennale.html" class="hover:text-purple-400 transition-colors">RC Décennale</a></li>
+                        <li><a href="assurance-vtc.html" class="hover:text-purple-400 transition-colors">Assurance VTC</a></li>
+                        <li><a href="rc-professionnelle.html" class="hover:text-purple-400 transition-colors">RC Professionnelle</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">À propos</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">CGU</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-500/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-500/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-500/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-500/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 GPA Groupe Partenaire des Assurances. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+        
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+        });
+        
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('show');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+</html>

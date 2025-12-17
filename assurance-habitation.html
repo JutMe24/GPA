@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assurance Habitation - GPA Groupe Partenaire des Assurances</title>
+    <meta name="description" content="Assurance habitation complète pour votre logement. Couverture incendie, vol, dégâts des eaux. Devis gratuit et rapide.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-green-500/30">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center transform hover:rotate-12 transition-transform">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">GPA</h1>
+                        <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link hover:text-green-400 transition-colors">Accueil</a>
+                    <a href="index.html#services" class="nav-link hover:text-green-400 transition-colors">Services</a>
+                    <a href="index.html#devis" class="nav-link hover:text-green-400 transition-colors">Devis</a>
+                    <a href="index.html#contact" class="nav-link hover:text-green-400 transition-colors">Contact</a>
+                    <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-green-500/50 transition-all">
+                        Devis Gratuit
+                    </button>
+                </div>
+                
+                <button class="md:hidden text-white" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center relative pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-900/20 to-blue-900/20"></div>
+        
+        <!-- 3D Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="mb-6">
+                        <a href="index.html#services" class="text-green-400 hover:text-green-300 transition-colors">
+                            <i class="fas fa-arrow-left mr-2"></i> Retour aux services
+                        </a>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                        <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                            Assurance Habitation
+                        </span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Protection complète pour votre logement. Couverture incendie, vol, dégâts des eaux, 
+                        et responsabilité civile. Solutions adaptées pour tous types d'habitations.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-green-500 to-green-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-green-500/50 transform hover:scale-105 transition-all">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Devis Gratuit
+                        </button>
+                        <button onclick="document.getElementById('coverages').scrollIntoView({behavior: 'smooth'})" class="border-2 border-green-500 px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-500/20 transition-all">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            Nos Couvertures
+                        </button>
+                    </div>
+                    
+                    <!-- Key Features -->
+                    <div class="grid grid-cols-2 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-home text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Tous logements</div>
+                            <div class="text-sm text-gray-400">Appartement, maison, studio</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-fire text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Incendie</div>
+                            <div class="text-sm text-gray-400">Protection complète</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-user-shield text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">RC Vie Privée</div>
+                            <div class="text-sm text-gray-400">Protection familiale</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-tint text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Dégâts des eaux</div>
+                            <div class="text-sm text-gray-400">Intervention rapide</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative w-full h-96 md:h-full min-h-[400px]">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-3xl transform rotate-3"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-600/20 to-green-500/20 rounded-3xl transform -rotate-3"></div>
+                        <div class="relative bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-green-500/30 h-full flex items-center justify-center overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop&crop=center" 
+                                 alt="Maison moderne" 
+                                 class="w-full h-full object-cover rounded-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent rounded-2xl"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <h3 class="text-2xl font-bold mb-2">Votre Foyer Protégé</h3>
+                                <p class="text-gray-300">Sérénité pour vous et vos proches</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverages Section -->
+    <section id="coverages" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+                        Nos Formules de Couverture
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Choisissez la protection adaptée à votre logement</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Essentielle -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-gray-600/30 hover:border-green-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Essentielle</h3>
+                    <p class="text-gray-300 mb-6">Couverture de base pour les risques essentiels.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Responsabilité civile
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Incendie et explosion
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Dégâts des eaux
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Catastrophes naturelles
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-green-400 mb-4">À partir de 15€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-600 transition-colors">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Confort -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all hover:transform hover:scale-105 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-green-600 px-4 py-1 rounded-full text-sm font-semibold">
+                        Populaire
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Confort</h3>
+                    <p class="text-gray-300 mb-6">Protection équilibrée pour une couverture complète.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garanties Essentielle
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Vol et tentative de vol
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Bris de glaces
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Dommages électriques
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Valeur à neuf
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-green-400 mb-4">À partir de 25€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-green-500 to-green-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Premium -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Premium</h3>
+                    <p class="text-gray-300 mb-6">Protection maximale pour une tranquillité absolue.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Toutes garanties Confort
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garantie des objets de valeur
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Protection juridique
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Assistance habitation 24h/24
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garantie locative
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-green-400 mb-4">À partir de 45€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-purple-500 to-purple-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Housing Types Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                        Tous Types de Logements
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Nous couvrons tous les types d'habitations</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop&crop=center" 
+                         alt="Appartement moderne" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Appartements</h3>
+                    <p class="text-gray-300 mb-4">Studio, T1, T2, T3 et plus</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Résidence principale</li>
+                        <li>• Résidence secondaire</li>
+                        <li>• Investissement locatif</li>
+                        <li>• Copropriété</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=300&fit=crop&crop=center" 
+                         alt="Maison familiale" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Maisons</h3>
+                    <p class="text-gray-300 mb-4">Maison individuelle, villa, pavillon</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Maison plain-pied</li>
+                        <li>• Maison à étages</li>
+                        <li>• Maison avec jardin</li>
+                        <li>• Maison de ville</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400&h=300&fit=crop&crop=center" 
+                         alt="Loft moderne" 
+                         class="w-full h-48 object-cover rounded-2xl mb-6">
+                    <h3 class="text-xl font-bold mb-3">Logements Atypiques</h3>
+                    <p class="text-gray-300 mb-4">Loft, duplex, atelier, maisonnette</p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>• Loft et atelier</li>
+                        <li>• Duplex et triplex</li>
+                        <li>• Maisonnette</li>
+                        <li>• Chalet et pied-à-terre</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Options Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-transparent">
+                        Options et Services Complémentaires
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Personnalisez votre contrat habitation</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-green-500/30 hover:border-green-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Multimédia</h3>
+                    <p class="text-gray-400 text-sm">Protection ordinateurs, TV, appareils photo</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-gem text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Objets de valeur</h3>
+                    <p class="text-gray-400 text-sm">Bijoux, œuvres d'art, montres jusqu'à 15000€</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-purple-500/30 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-dumbbell text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Équipements sportifs</h3>
+                    <p class="text-gray-400 text-sm">Vélos, skis, matériel de sport</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-yellow-500/30 hover:border-yellow-400/50 transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-garden text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Jardin et terrasse</h3>
+                    <p class="text-gray-400 text-sm">Mobilier de jardin, abri, équipements extérieurs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                        Pourquoi Choisir GPA ?
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">L'expertise habitation au service de votre tranquillité</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-tachometer-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Devis immédiat</h3>
+                                <p class="text-gray-300">Calcul instantané et souscription en ligne simple</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-euro-sign text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Tarifs compétitifs</h3>
+                                <p class="text-gray-300">Jusqu'à -30% sur vos primes d'assurance habitation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-tools text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Réseau d'artisans</h3>
+                                <p class="text-gray-300">Artisans certifiés pour réparations et remplacements</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-headset text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Assistance 24h/24</h3>
+                                <p class="text-gray-300">Conseillers disponibles pour tous vos sinistres</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop&crop=center" 
+                             alt="Service client assurance" 
+                             class="rounded-3xl w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-6 text-white">
+                            <div class="text-3xl font-bold mb-2">20000+</div>
+                            <div class="text-sm">foyers protégés par GPA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                        Questions Fréquentes
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Tout savoir sur l'assurance habitation</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-green-500/30" data-aos="fade-up" data-aos-delay="100">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">L'assurance habitation est-elle obligatoire ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Oui, l'assurance habitation est obligatoire pour les locataires (loi ALUR) et fortement recommandée pour les propriétaires. Elle couvre la responsabilité civile et les dommages au logement.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-green-500/30" data-aos="fade-up" data-aos-delay="200">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Que couvre la responsabilité civile vie privée ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        La RC vie privée couvre les dommages que vous ou vos proches pourriez causer à autrui dans votre vie quotidienne : accidents domestiques, dégâts chez des voisins, accidents causés par vos enfants ou animaux de compagnie.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-green-500/30" data-aos="fade-up" data-aos-delay="300">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Comment calculer la valeur à assurer ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Il faut évaluer le coût de reconstruction du logement (murs, toit, installations) et la valeur de tous vos biens mobiliers. Nos conseillers peuvent vous aider à estimer précisément ces montants pour garantir une couverture optimale.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-green-500/30" data-aos="fade-up" data-aos-delay="400">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Quelles sont les démarches en cas de sinistre ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        En cas de sinistre, déclarez-le dans les 5 jours ouvrés par téléphone, en agence ou en ligne. Prenez des photos, conservez les biens endommagés et listez les objets volés. Un expert sera désigné pour évaluer les dommages.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-br from-green-500 to-blue-600 rounded-3xl p-12 text-center" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+                    Protégez Votre Logement Maintenant
+                </h2>
+                <p class="text-xl mb-8 text-green-100">
+                    Obtenez votre devis personnalisé en moins de 2 minutes
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="window.location.href='index.html#devis'" class="bg-white text-green-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-white/50 transform hover:scale-105 transition-all">
+                        <i class="fas fa-calculator mr-2"></i>
+                        Devis Gratuit
+                    </button>
+                    <button onclick="window.location.href='tel:+33123456789'" class="border-2 border-white px-8 py-4 rounded-full text-lg font-semibold text-white hover:bg-white/20 transition-all">
+                        <i class="fas fa-phone mr-2"></i>
+                        Appeler un conseiller
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">GPA</h3>
+                            <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Votre partenaire de confiance pour toutes vos assurances.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="assurance-auto.html" class="hover:text-green-400 transition-colors">Assurance Auto</a></li>
+                        <li><a href="assurance-moto.html" class="hover:text-green-400 transition-colors">Assurance Moto</a></li>
+                        <li><a href="assurance-habitation.html" class="hover:text-green-400 transition-colors">Assurance Habitation</a></li>
+                        <li><a href="rc-decennale.html" class="hover:text-green-400 transition-colors">RC Décennale</a></li>
+                        <li><a href="assurance-vtc.html" class="hover:text-green-400 transition-colors">Assurance VTC</a></li>
+                        <li><a href="rc-professionnelle.html" class="hover:text-green-400 transition-colors">RC Professionnelle</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-green-400 transition-colors">À propos</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition-colors">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition-colors">CGU</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-500/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-500/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-500/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-500/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 GPA Groupe Partenaire des Assurances. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+        
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+        });
+        
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('show');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+</html>

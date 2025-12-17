@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assurance Auto - GPA Groupe Partenaire des Assurances</title>
+    <meta name="description" content="Assurance auto complète pour tous les véhicules. Couverture risques aggravés, tous risques, tiers+. Devis gratuit et rapide.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-blue-500/30">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center transform hover:rotate-12 transition-transform">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">GPA</h1>
+                        <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link hover:text-blue-400 transition-colors">Accueil</a>
+                    <a href="index.html#services" class="nav-link hover:text-blue-400 transition-colors">Services</a>
+                    <a href="index.html#devis" class="nav-link hover:text-blue-400 transition-colors">Devis</a>
+                    <a href="index.html#contact" class="nav-link hover:text-blue-400 transition-colors">Contact</a>
+                    <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-2 rounded-full hover:shadow-lg hover:shadow-blue-500/50 transition-all">
+                        Devis Gratuit
+                    </button>
+                </div>
+                
+                <button class="md:hidden text-white" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center relative pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
+        
+        <!-- 3D Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="mb-6">
+                        <a href="index.html#services" class="text-blue-400 hover:text-blue-300 transition-colors">
+                            <i class="fas fa-arrow-left mr-2"></i> Retour aux services
+                        </a>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                        <span class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                            Assurance Auto
+                        </span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Protection complète pour votre véhicule. Solutions adaptées y compris pour les risques aggravés. 
+                        Couverture tous risques, tiers+, et formules sur mesure.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="window.location.href='index.html#devis'" class="bg-gradient-to-r from-blue-500 to-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all">
+                            <i class="fas fa-calculator mr-2"></i>
+                            Devis Gratuit
+                        </button>
+                        <button onclick="document.getElementById('coverages').scrollIntoView({behavior: 'smooth'})" class="border-2 border-blue-500 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-500/20 transition-all">
+                            <i class="fas fa-shield-alt mr-2"></i>
+                            Nos Couvertures
+                        </button>
+                    </div>
+                    
+                    <!-- Key Features -->
+                    <div class="grid grid-cols-2 gap-6 mt-12">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-car-crash text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Accidents</div>
+                            <div class="text-sm text-gray-400">Protection complète</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-tools text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Assistance</div>
+                            <div class="text-sm text-gray-400">24h/24 7j/7</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-user-shield text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Risques Aggravés</div>
+                            <div class="text-sm text-gray-400">Solutions adaptées</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-star text-white text-xl"></i>
+                            </div>
+                            <div class="font-semibold">Premium</div>
+                            <div class="text-sm text-gray-400">Services exclusifs</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative w-full h-96 md:h-full min-h-[400px]">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-3xl transform rotate-3"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-500/20 rounded-3xl transform -rotate-3"></div>
+                        <div class="relative bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-blue-500/30 h-full flex items-center justify-center overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&h=600&fit=crop&crop=center" 
+                                 alt="Voiture moderne" 
+                                 class="w-full h-full object-cover rounded-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent rounded-2xl"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <h3 class="text-2xl font-bold mb-2">Conduisez l'esprit tranquille</h3>
+                                <p class="text-gray-300">Protection complète pour vous et votre véhicule</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverages Section -->
+    <section id="coverages" class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                        Nos Formules de Couverture
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Choisissez la formule adaptée à vos besoins</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tiers -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-gray-600/30 hover:border-blue-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Au Tiers</h3>
+                    <p class="text-gray-300 mb-6">Couverture minimale obligatoire pour les dommages causés aux tiers.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Responsabilité civile
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Défense pénale
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Assistance 0km
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-blue-400 mb-4">À partir de 29€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gray-700 py-3 rounded-xl font-semibold hover:bg-gray-600 transition-colors">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Tiers+ -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all hover:transform hover:scale-105 relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-1 rounded-full text-sm font-semibold">
+                        Populaire
+                    </div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-star text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tiers+</h3>
+                    <p class="text-gray-300 mb-6">Formule équilibrée avec protections supplémentaires.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garanties Tiers
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Vol et incendie
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Bris de glaces
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Catastrophes naturelles
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-blue-400 mb-4">À partir de 49€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-blue-500 to-blue-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+                
+                <!-- Tous Risques -->
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all hover:transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tous Risques</h3>
+                    <p class="text-gray-300 mb-6">Protection maximale pour une tranquillité d'esprit totale.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Toutes garanties Tiers+
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Dommages tous accidents
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Véhicule de remplacement
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Protection du conducteur
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-green-400 mr-3"></i>
+                            Garantie valeur à neuf
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold text-blue-400 mb-4">À partir de 79€/mois</div>
+                    <button onclick="window.location.href='index.html#devis'" class="w-full bg-gradient-to-r from-purple-500 to-purple-600 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+                        Choisir cette formule
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Options Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Options et Services Complémentaires
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Personnalisez votre contrat</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-blue-500/30 hover:border-blue-400/50 transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-car-side text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Véhicule de remplacement</h3>
+                    <p class="text-gray-400 text-sm">Véhicule de prêt en cas d'immobilisation</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-green-500/30 hover:border-green-400/50 transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-phone-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Assistance Premium</h3>
+                    <p class="text-gray-400 text-sm">Dépannage 24h/24 partout en Europe</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-purple-500/30 hover:border-purple-400/50 transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-user-friends text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Conducteurs additionnels</h3>
+                    <p class="text-gray-400 text-sm">Protection pour tous les conducteurs réguliers</p>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-yellow-500/30 hover:border-yellow-400/50 transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Application mobile</h3>
+                    <p class="text-gray-400 text-sm">Gestion de contrat et déclaration de sinistre</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Pourquoi Choisir GPA ?
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">L'expertise au service de votre protection</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-tachometer-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Réponse immédiate</h3>
+                                <p class="text-gray-300">Devis sous 5 minutes et contrat sous 24h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-euro-sign text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Tarifs compétitifs</h3>
+                                <p class="text-gray-300">Jusqu'à -40% sur vos primes d'assurance</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-user-shield text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Risques aggravés</h3>
+                                <p class="text-gray-300">Solutions pour conducteurs malussés et jeunes conducteurs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-headset text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Service client premium</h3>
+                                <p class="text-gray-300">Conseillers dédiés disponibles 7j/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=center" 
+                             alt="Service client assurance" 
+                             class="rounded-3xl w-full">
+                        <div class="absolute -bottom-6 -left-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-6 text-white">
+                            <div class="text-3xl font-bold mb-2">15+ ans</div>
+                            <div class="text-sm">d'expertise en assurance auto</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 relative bg-gray-800/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        Questions Fréquentes
+                    </span>
+                </h2>
+                <p class="text-xl text-gray-300">Tout savoir sur l'assurance auto</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-blue-500/30" data-aos="fade-up" data-aos-delay="100">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Qu'est-ce que l'assurance au tiers ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        L'assurance au tiers est la couverture minimale obligatoire. Elle couvre les dommages que vous pourriez causer à autrui (responsabilité civile), mais ne protège pas votre propre véhicule.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-blue-500/30" data-aos="fade-up" data-aos-delay="200">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Comment fonctionnent les risques aggravés ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Les risques aggravés concernent les conducteurs avec un malus élevé, de jeunes conducteurs, ou des antécédents d'accidents. GPA propose des solutions adaptées avec des tarifs compétitifs malgré votre profil.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-blue-500/30" data-aos="fade-up" data-aos-delay="300">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Quelles sont les garanties incluses dans tous risques ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        La formule tous risques inclut : responsabilité civile, vol, incendie, bris de glaces, dommages tous accidents, catastrophe naturelle, protection du conducteur, et souvent véhicule de remplacement.
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800/50 backdrop-blur-md rounded-2xl border border-blue-500/30" data-aos="fade-up" data-aos-delay="400">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-700/30 transition-colors rounded-t-2xl">
+                        <span class="text-lg font-semibold">Comment déclarer un sinistre ?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-300">
+                        Vous pouvez déclarer un sinistre 24h/24 par téléphone, via notre application mobile, ou en ligne. Un conseiller vous accompagnera dans toutes les démarches et assurera le suivi jusqu'à l'indemnisation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-12 text-center" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+                    Protégez Votre Véhicule Maintenant
+                </h2>
+                <p class="text-xl mb-8 text-blue-100">
+                    Obtenez votre devis personnalisé en moins de 5 minutes
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="window.location.href='index.html#devis'" class="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl hover:shadow-white/50 transform hover:scale-105 transition-all">
+                        <i class="fas fa-calculator mr-2"></i>
+                        Devis Gratuit
+                    </button>
+                    <button onclick="window.location.href='tel:+33123456789'" class="border-2 border-white px-8 py-4 rounded-full text-lg font-semibold text-white hover:bg-white/20 transition-all">
+                        <i class="fas fa-phone mr-2"></i>
+                        Appeler un conseiller
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">GPA</h3>
+                            <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Votre partenaire de confiance pour toutes vos assurances.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="assurance-auto.html" class="hover:text-blue-400 transition-colors">Assurance Auto</a></li>
+                        <li><a href="assurance-moto.html" class="hover:text-blue-400 transition-colors">Assurance Moto</a></li>
+                        <li><a href="assurance-habitation.html" class="hover:text-blue-400 transition-colors">Assurance Habitation</a></li>
+                        <li><a href="rc-decennale.html" class="hover:text-blue-400 transition-colors">RC Décennale</a></li>
+                        <li><a href="assurance-vtc.html" class="hover:text-blue-400 transition-colors">Assurance VTC</a></li>
+                        <li><a href="rc-professionnelle.html" class="hover:text-blue-400 transition-colors">RC Professionnelle</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">À propos</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">CGU</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 GPA Groupe Partenaire des Assurances. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+        
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+        });
+        
+        // Mobile Menu
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('show');
+            const icon = this.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+</html>

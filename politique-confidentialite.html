@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de confidentialité - GPA Groupe Partenaire des Assurances</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="font-bold text-white">GPA</span>
+                    </div>
+                    <span class="text-xl font-bold">GPA</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-300 hover:text-white transition-colors">Accueil</a>
+                    <div class="relative group">
+                        <button class="nav-link text-gray-300 hover:text-white transition-colors flex items-center space-x-1">
+                            <span>Services</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                            <a href="assurance-auto.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance Auto</a>
+                            <a href="assurance-moto.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance Moto</a>
+                            <a href="assurance-habitation.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance Habitation</a>
+                            <a href="rc-decennale.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">RC Décennale</a>
+                            <a href="assurance-vtc.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance VTC</a>
+                            <a href="rc-professionnelle.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">RC Professionnelle</a>
+                        </div>
+                    </div>
+                    <a href="a-propos.html" class="nav-link text-gray-300 hover:text-white transition-colors">À propos</a>
+                    <a href="index.html#contact" class="nav-link text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-300 hover:text-white">Accueil</a>
+                <div class="py-2">
+                    <div class="text-gray-300 font-semibold">Services</div>
+                    <div class="pl-4 space-y-1">
+                        <a href="assurance-auto.html" class="block py-1 text-gray-400 hover:text-white">Assurance Auto</a>
+                        <a href="assurance-moto.html" class="block py-1 text-gray-400 hover:text-white">Assurance Moto</a>
+                        <a href="assurance-habitation.html" class="block py-1 text-gray-400 hover:text-white">Assurance Habitation</a>
+                        <a href="rc-decennale.html" class="block py-1 text-gray-400 hover:text-white">RC Décennale</a>
+                        <a href="assurance-vtc.html" class="block py-1 text-gray-400 hover:text-white">Assurance VTC</a>
+                        <a href="rc-professionnelle.html" class="block py-1 text-gray-400 hover:text-white">RC Professionnelle</a>
+                    </div>
+                </div>
+                <a href="a-propos.html" class="block py-2 text-gray-300 hover:text-white">À propos</a>
+                <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                        Politique de confidentialité
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Notre engagement pour la protection de vos données personnelles
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="pb-20 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-gray-700" data-aos="fade-up">
+                <div class="space-y-8">
+                    <!-- Introduction -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Introduction</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                GPA Groupe Partenaire des Assurances ("GPA", "nous", "notre") s'engage à protéger 
+                                et à respecter votre vie privée. Cette politique de confidentialité explique 
+                                comment nous collectons, utilisons, partageons et protégeons vos informations 
+                                personnelles lorsque vous utilisez notre site web gpa-assurances.com et nos services.
+                            </p>
+                            <p>
+                                En utilisant notre site, vous acceptez les pratiques décrites dans cette politique 
+                                de confidentialité. Si vous n'êtes pas d'accord avec ces termes, veuillez ne pas 
+                                utiliser notre site.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Données collectées -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Quelles données collectons-nous ?</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p><strong class="text-white">Informations que vous nous fournissez :</strong></p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Nom, prénom et coordonnées (adresse email, numéro de téléphone, adresse postale)</li>
+                                <li>Informations démographiques (âge, situation familiale, profession)</li>
+                                <li>Informations sur vos véhicules (marque, modèle, immatriculation, usage)</li>
+                                <li>Informations sur votre logement (type, surface, localisation)</li>
+                                <li>Informations sur vos activités professionnelles</li>
+                                <li>Contenu des communications que vous échangez avec nous</li>
+                            </ul>
+                            
+                            <p class="mt-4"><strong class="text-white">Informations collectées automatiquement :</strong></p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>Adresse IP et informations de connexion</li>
+                                <li>Type de navigateur et système d'exploitation</li>
+                                <li>Pages visitées et temps passé sur notre site</li>
+                                <li>Informations sur votre appareil</li>
+                                <li>Cookies et données de suivi similaires</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Utilisation des données -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Comment utilisons-nous vos données ?</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>Nous utilisons vos informations personnelles pour :</p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li><strong>Fournir nos services :</strong> Établir des devis d'assurance, gérer vos contrats et traiter vos demandes</li>
+                                <li><strong>Communiquer avec vous :</strong> Répondre à vos questions, vous envoyer des informations sur nos services</li>
+                                <li><strong>Améliorer nos services :</strong> Analyser l'utilisation de notre site pour l'optimiser</li>
+                                <li><strong>Marketing :</strong> Vous informer sur nos produits et services pertinents (avec votre consentement)</li>
+                                <li><strong>Sécurité :</strong> Prévenir les fraudes et assurer la sécurité de nos services</li>
+                                <li><strong>Obligations légales :</strong> Respecter nos obligations légales et réglementaires</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Base légale -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Base légale du traitement</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>Nous traitons vos données personnelles uniquement lorsque nous disposons d'une base légale valide :</p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li><strong>Consentement :</strong> Vous avez consenti au traitement de vos données</li>
+                                <li><strong>Contrat :</strong> Le traitement est nécessaire à l'exécution d'un contrat avec vous</li>
+                                <li><strong>Obligation légale :</strong> Nous sommes légalement tenus de traiter vos données</li>
+                                <li><strong>Intérêt légitime :</strong> Le traitement est nécessaire à nos intérêts légitimes commerciaux</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Partage des données -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Partage de vos données</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>Ne partageons vos données personnelles que dans les circonstances suivantes :</p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li><strong>Partenaires assureurs :</strong> Pour souscrire vos contrats d'assurance</li>
+                                <li><strong>Prestataires de services :</strong> Hébergeur web, fournisseurs de paiement, services marketing</li>
+                                <li><strong>Autorités légales :</strong> Lorsque la loi l'exige ou sur demande des autorités compétentes</li>
+                                <li><strong>Transfert d'entreprise :</strong> En cas de fusion, acquisition ou vente de nos actifs</li>
+                            </ul>
+                            <p class="mt-4">
+                                Nous ne vendons jamais vos données personnelles à des tiers à des fins marketing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Cookies -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Cookies et technologies similaires</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Nous utilisons des cookies pour améliorer votre expérience sur notre site. 
+                                Les types de cookies que nous utilisons incluent :
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site</li>
+                                <li><strong>Cookies de performance :</strong> Pour analyser l'utilisation du site</li>
+                                <li><strong>Cookies fonctionnels :</strong> Pour mémoriser vos préférences</li>
+                                <li><strong>Cookies marketing :</strong> Pour personnaliser les publicités (avec consentement)</li>
+                            </ul>
+                            <p class="mt-4">
+                                Vous pouvez gérer vos préférences cookies via les paramètres de votre navigateur 
+                                ou notre bandeau de cookies.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Conservation des données -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Durée de conservation des données</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Nous conservons vos données personnelles uniquement pendant la durée nécessaire 
+                                aux finalités pour lesquelles elles ont été collectées :
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li><strong>Données clients :</strong> Pendant la durée de la relation contractuelle et 10 ans après</li>
+                                <li><strong>Données prospects :</strong> 3 ans après le dernier contact</li>
+                                <li><strong>Données analytics :</strong> 13 mois maximum</li>
+                                <li><strong>Cookies :</strong> Selon leur durée de vie (généralement 13 mois maximum)</li>
+                            </ul>
+                            <p class="mt-4">
+                                Après ces délais, vos données sont définitivement supprimées ou anonymisées.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Droits RGPD -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Vos droits (RGPD)</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li><strong>Droit d'accès :</strong> Savoir si nous traitons vos données et lesquelles</li>
+                                <li><strong>Droit de rectification :</strong> Corriger vos données inexactes</li>
+                                <li><strong>Droit d'effacement :</strong> Demander la suppression de vos données</li>
+                                <li><strong>Droit de limitation :</strong> Limiter le traitement de vos données</li>
+                                <li><strong>Droit de portabilité :</strong> Recevoir vos données dans un format lisible</li>
+                                <li><strong>Droit d'opposition :</strong> Vous opposer au traitement de vos données</li>
+                                <li><strong>Droit de retrait du consentement :</strong> Retirer votre consentement à tout moment</li>
+                            </ul>
+                            <p class="mt-4">
+                                Pour exercer ces droits, contactez-nous à : 
+                                <a href="mailto:contact@partenaireassurances.com" class="text-blue-400 hover:text-blue-300 underline">contact@partenaireassurances.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sécurité -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Sécurité de vos données</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Nous mettons en œuvre des mesures techniques et organisationnelles appropriées 
+                                pour protéger vos données personnelles contre :
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 ml-4">
+                                <li>L'accès non autorisé</li>
+                                <li>L'altération, la perte ou la destruction</li>
+                                <li>La divulgation accidentelle</li>
+                                <li>Le traitement illicite</li>
+                            </ul>
+                            <p class="mt-4">
+                                Nos mesures incluent le chiffrement SSL, les pare-feu, l'authentification forte 
+                                et la formation régulière de notre personnel à la sécurité des données.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- International -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Transferts internationaux</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Vos données sont principalement hébergées en France au sein de l'Union Européenne. 
+                                Tout transfert en dehors de l'UE ne sera effectué que dans le respect des garanties 
+                                appropriées prévues par le RGPD.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Modifications -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Modifications de cette politique</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Nous pouvons mettre à jour cette politique de confidentialité pour refléter 
+                                les changements dans nos pratiques ou pour des raisons légales et réglementaires. 
+                                Les modifications seront publiées sur cette page avec une date de mise à jour.
+                            </p>
+                            <p><strong>Dernière mise à jour :</strong> 28 novembre 2024</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Contactez-nous</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Si vous avez des questions concernant cette politique de confidentialité 
+                                ou l'utilisation de vos données personnelles, contactez-nous :
+                            </p>
+                            <ul class="space-y-2 ml-4">
+                                <li><strong>Email :</strong> <a href="mailto:contact@partenaireassurances.com" class="text-blue-400 hover:text-blue-300 underline">contact@partenaireassurances.com</a></li>
+                                <li><strong>Téléphone :</strong> +33 4 81 91 28 80</li>
+                                <li><strong>Adresse :</strong> Rue De La Part Dieu, 69003 Lyon, France</li>
+                            </ul>
+                            <p class="mt-4">
+                                Vous pouvez également contacter notre Délégué à la Protection des Données (DPD) 
+                                à la même adresse email en précisant "DPD" dans l'objet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-blue-600/20 to-purple-600/20">
+        <div class="container mx-auto text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Besoin d'aide ?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Notre équipe est à votre disposition pour répondre à toutes vos questions 
+                    sur la protection de vos données.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all">
+                        Nous contacter
+                    </a>
+                    <a href="index.html" class="px-8 py-4 bg-gray-800 rounded-xl font-semibold hover:bg-gray-700 transition-all">
+                        Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="font-bold text-white">GPA</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">GPA</h3>
+                            <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Votre partenaire de confiance pour toutes vos assurances.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="assurance-auto.html" class="hover:text-blue-400 transition-colors">Assurance Auto</a></li>
+                        <li><a href="assurance-moto.html" class="hover:text-blue-400 transition-colors">Assurance Moto</a></li>
+                        <li><a href="assurance-habitation.html" class="hover:text-blue-400 transition-colors">Assurance Habitation</a></li>
+                        <li><a href="rc-decennale.html" class="hover:text-blue-400 transition-colors">RC Décennale</a></li>
+                        <li><a href="assurance-vtc.html" class="hover:text-blue-400 transition-colors">Assurance VTC</a></li>
+                        <li><a href="rc-professionnelle.html" class="hover:text-blue-400 transition-colors">RC Professionnelle</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="a-propos.html" class="hover:text-blue-400 transition-colors">À propos</a></li>
+                        <li><a href="mentions-legales.html" class="hover:text-blue-400 transition-colors">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-blue-400 transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="cgu.html" class="hover:text-blue-400 transition-colors">CGU</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 GPA Groupe Partenaire des Assurances. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

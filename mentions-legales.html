@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales - GPA Groupe Partenaire des Assurances</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="font-bold text-white">GPA</span>
+                    </div>
+                    <span class="text-xl font-bold">GPA</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-300 hover:text-white transition-colors">Accueil</a>
+                    <div class="relative group">
+                        <button class="nav-link text-gray-300 hover:text-white transition-colors flex items-center space-x-1">
+                            <span>Services</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+                            <a href="assurance-auto.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance Auto</a>
+                            <a href="assurance-moto.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance Moto</a>
+                            <a href="assurance-habitation.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance Habitation</a>
+                            <a href="rc-decennale.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">RC Décennale</a>
+                            <a href="assurance-vtc.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">Assurance VTC</a>
+                            <a href="rc-professionnelle.html" class="block px-4 py-2 hover:bg-gray-700 transition-colors">RC Professionnelle</a>
+                        </div>
+                    </div>
+                    <a href="a-propos.html" class="nav-link text-gray-300 hover:text-white transition-colors">À propos</a>
+                    <a href="index.html#contact" class="nav-link text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+                
+                <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="px-4 py-2 space-y-2">
+                <a href="index.html" class="block py-2 text-gray-300 hover:text-white">Accueil</a>
+                <div class="py-2">
+                    <div class="text-gray-300 font-semibold">Services</div>
+                    <div class="pl-4 space-y-1">
+                        <a href="assurance-auto.html" class="block py-1 text-gray-400 hover:text-white">Assurance Auto</a>
+                        <a href="assurance-moto.html" class="block py-1 text-gray-400 hover:text-white">Assurance Moto</a>
+                        <a href="assurance-habitation.html" class="block py-1 text-gray-400 hover:text-white">Assurance Habitation</a>
+                        <a href="rc-decennale.html" class="block py-1 text-gray-400 hover:text-white">RC Décennale</a>
+                        <a href="assurance-vtc.html" class="block py-1 text-gray-400 hover:text-white">Assurance VTC</a>
+                        <a href="rc-professionnelle.html" class="block py-1 text-gray-400 hover:text-white">RC Professionnelle</a>
+                    </div>
+                </div>
+                <a href="a-propos.html" class="block py-2 text-gray-300 hover:text-white">À propos</a>
+                <a href="index.html#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                        Mentions légales
+                    </span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Informations légales conformes à la réglementation française
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="pb-20 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-gray-800/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-gray-700" data-aos="fade-up">
+                <div class="space-y-8">
+                    <!-- Édition du site -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Édition du site</h2>
+                        <div class="text-gray-300 space-y-2">
+                            <p><strong>Raison sociale :</strong> GPA Groupe Partenaire des Assurances</p>
+                            <p><strong>Forme juridique :</strong> SASU (Société par Actions Simplifiée Unipersonnelle)</p>
+                            <p><strong>Capital social :</strong> 10 000 €</p>
+                            <p><strong>Adresse du siège social :</strong> Rue De La Part Dieu, 69003 Lyon, France</p>
+                            <p><strong>Téléphone :</strong> +33 4 81 91 28 80</p>
+                            <p><strong>Email :</strong> contact@partenaireassurances.com</p>
+                            <p><strong>Numéro SIREN :</strong> 812345678</p>
+                            <p><strong>Numéro SIRET :</strong> 81234567800012</p>
+                            <p><strong>Code NAF/APE :</strong> 6622Z - Assurance et réassurance</p>
+                        </div>
+                    </div>
+
+                    <!-- Représentant légal -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Représentant légal</h2>
+                        <div class="text-gray-300 space-y-2">
+                            <p><strong>Nom du représentant :</strong> Jean Dupont</p>
+                            <p><strong>Fonction :</strong> Président-Directeur Général</p>
+                            <p><strong>Qualité :</strong> Représentant légal de la société GPA Groupe Partenaire des Assurances</p>
+                        </div>
+                    </div>
+
+                    <!-- Hébergement -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Hébergement du site</h2>
+                        <div class="text-gray-300 space-y-2">
+                            <p><strong>Prestataire d'hébergement :</strong> OVH SAS</p>
+                            <p><strong>Adresse :</strong> 2 rue Kellermann - 59100 Roubaix - France</p>
+                            <p><strong>Téléphone :</strong> +33 9 72 10 10 07</p>
+                            <p><strong>Email :</strong> support@ovh.net</p>
+                            <p><strong>Site web :</strong> https://www.ovhcloud.com</p>
+                        </div>
+                    </div>
+
+                    <!-- Propriété intellectuelle -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Propriété intellectuelle</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur 
+                                et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les 
+                                représentations iconographiques et photographiques.
+                            </p>
+                            <p>
+                                La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement 
+                                interdite, sauf autorisation expresse du directeur de publication.
+                            </p>
+                            <p>
+                                Les logos, marques et contents figurant sur ce site sont la propriété exclusive de GPA Groupe 
+                                Partenaire des Assurances ou de ses partenaires et sont protégés par les lois sur la propriété 
+                                intellectuelle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Cookies -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Cookies et traceurs</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Ce site utilise des cookies nécessaires à son bon fonctionnement et des cookies destinés à améliorer 
+                                votre expérience de navigation.
+                            </p>
+                            <p>
+                                Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez notre site. 
+                                Ils nous permettent de reconnaître votre navigateur et de mémoriser certaines informations.
+                            </p>
+                            <p>
+                                Vous pouvez paramétrer votre navigateur pour refuser les cookies ou vous alerter lorsque des cookies 
+                                sont proposés. Vous pouvez également supprimer les cookies déjà présents sur votre appareil.
+                            </p>
+                            <p>
+                                Pour plus d'informations sur notre politique d'utilisation des cookies, consultez notre 
+                                <a href="politique-confidentialite.html" class="text-blue-400 hover:text-blue-300 underline">politique de confidentialité</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Données personnelles -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Données personnelles</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Conformément au Règlement (UE) 2016/679 du Parlement Européen et du Conseil du 27 avril 2016 
+                                relatif à la protection des personnes physiques à l'égard du traitement des données à caractère 
+                                personnel et à la libre circulation de ces données (RGPD), vous disposez d'un droit d'accès, 
+                                de modification, de rectification et de suppression des données vous concernant.
+                            </p>
+                            <p>
+                                Pour exercer ce droit, vous pouvez nous contacter par email à l'adresse 
+                                <a href="mailto:contact@partenaireassurances.com" class="text-blue-400 hover:text-blue-300 underline">contact@partenaireassurances.com</a> 
+                                ou par courrier à l'adresse du siège social.
+                            </p>
+                            <p>
+                                Les données collectées sur ce site sont destinées exclusivement à GPA Groupe Partenaire des 
+                                Assurances et ne sont jamais communiquées à des tiers sans votre consentement préalable.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Limitation de responsabilité -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Limitation de responsabilité</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                GPA Groupe Partenaire des Assurances s'efforce de fournir sur ce site des informations aussi 
+                                précises que possible. Toutefois, il ne pourra être tenu responsable des omissions, des inexactitudes 
+                                et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires 
+                                qui lui fournissent ces informations.
+                            </p>
+                            <p>
+                                Toutes les informations proposées sur le site sont données à titre indicatif et ne constituent 
+                                pas une offre contractuelle. GPA Groupe Partenaire des Assurances ne saurait être responsable 
+                                des dommages directs ou indirects pouvant résulter de l'utilisation de ce site.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Litiges -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Litiges</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Le présent contrat est régi par la loi française. En cas de litige, et après tentative de 
+                                résolution amiable, les tribunaux français seront seuls compétents.
+                            </p>
+                            <p>
+                                La langue du présent contrat est le français.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Droit applicable -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Droit applicable et attribution de juridiction</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                Les présentes mentions légales sont soumises au droit français. En cas de litige et en l'absence 
+                                de résolution amiable, le litige sera porté devant les tribunaux compétents de Lyon, France.
+                            </p>
+                            <p>
+                                La langue du contrat est le français.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Mise à jour -->
+                    <div>
+                        <h2 class="text-2xl font-bold mb-4 text-blue-400">Mise à jour des mentions légales</h2>
+                        <div class="text-gray-300 space-y-3">
+                            <p>
+                                GPA Groupe Partenaire des Assurances se réserve le droit de modifier ces mentions légales à tout moment. 
+                                Les utilisateurs sont invités à consulter régulièrement cette page pour prendre connaissance 
+                                des éventuelles modifications.
+                            </p>
+                            <p><strong>Dernière mise à jour :</strong> 28 novembre 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 bg-gradient-to-br from-blue-600/20 to-purple-600/20">
+        <div class="container mx-auto text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Des questions ?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Notre équipe est à votre disposition pour répondre à toutes vos questions 
+                    concernant nos services et nos mentions légales.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all">
+                        Nous contacter
+                    </a>
+                    <a href="index.html" class="px-8 py-4 bg-gray-800 rounded-xl font-semibold hover:bg-gray-700 transition-all">
+                        Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="font-bold text-white">GPA</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">GPA</h3>
+                            <p class="text-xs text-gray-400">Groupe Partenaire des Assurances</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Votre partenaire de confiance pour toutes vos assurances.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="assurance-auto.html" class="hover:text-blue-400 transition-colors">Assurance Auto</a></li>
+                        <li><a href="assurance-moto.html" class="hover:text-blue-400 transition-colors">Assurance Moto</a></li>
+                        <li><a href="assurance-habitation.html" class="hover:text-blue-400 transition-colors">Assurance Habitation</a></li>
+                        <li><a href="rc-decennale.html" class="hover:text-blue-400 transition-colors">RC Décennale</a></li>
+                        <li><a href="assurance-vtc.html" class="hover:text-blue-400 transition-colors">Assurance VTC</a></li>
+                        <li><a href="rc-professionnelle.html" class="hover:text-blue-400 transition-colors">RC Professionnelle</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="a-propos.html" class="hover:text-blue-400 transition-colors">À propos</a></li>
+                        <li><a href="mentions-legales.html" class="hover:text-blue-400 transition-colors">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-blue-400 transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="cgu.html" class="hover:text-blue-400 transition-colors">CGU</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 GPA Groupe Partenaire des Assurances. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
